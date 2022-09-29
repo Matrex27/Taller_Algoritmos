@@ -1,0 +1,11 @@
+double mancha = 100;
+        int min = 0;
+        
+        for (min = 0;mancha<=1000;min+=5){
+            
+            mancha = mancha+(mancha*0.07);
+            
+           
+        }
+        
+        System.out.println("El tiempo que le tomo a la mancha alcanzar 1000 metros cuadrados fue: "+min+" minutos.");
