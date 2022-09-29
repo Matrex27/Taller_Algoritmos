@@ -1,0 +1,19 @@
+Scanner sc = new Scanner(System.in);
+        
+        int media = 0;
+        int num = 1, cont = 0;
+        
+
+        while(num>0){   
+            System.out.print("Ingrese un numero: ");
+            num = sc.nextInt();
+            
+            if(num>0){
+                cont++;
+                media = media+num;
+            }
+        }
+        
+        
+        media = media/cont;
+        System.out.println("La media de los numeros ingresados es: "+media);
