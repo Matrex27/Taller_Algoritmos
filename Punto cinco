@@ -1,0 +1,88 @@
+Scanner sc = new Scanner(System.in);
+        
+        int seguir = 1;  //VARIABLE PARA SABER SI EL BUCLE CONTINUA; 1 = SEGUIR, 0 = SALIR
+        
+        
+        int facultad, estrato, numEst=0, valMatricula; // VARIABLES DE INGRESO 
+        
+        int nEstFac1=0, nEstFac2=0, nEstFac3=0, nEstFac4=0, nEstFac5=0; // VARIABLES PARA SABER EL NUMERO DE ESTUDIANTES DE CADA FACULTAD
+        
+        int sumFac1=0, sumFac2=0, sumFac3=0, sumFac4=0, sumFac5=0;
+        
+        
+        
+        
+        while(seguir == 1){
+            //PEDIMOS LOS DATOS: VALOR, FACULTAD, ESTRATO.
+            System.out.print("Ingrese el valor de la matricula del estudiante: ");
+            valMatricula = sc.nextInt();
+            
+            System.out.print("Ingrese la facultad del estudiante: ");
+            facultad = sc.nextInt();
+            
+            System.out.print("Ingrese el estrato del estudiante: ");
+            estrato = sc.nextInt();
+            
+            //VALIDAMOS A QUE FACULTAD PERTENECE Y POR ENDE CUALES SON LOS CALCULOS A REALIZAR
+            
+            
+           
+            
+            
+            if(facultad == 1 ){
+                nEstFac1++;
+                numEst++;               
+                if(estrato <= 3){
+                    valMatricula -= valMatricula*0.1; 
+                }                              
+                sumFac1 += valMatricula; 
+            }
+            if(facultad == 2 ){
+                nEstFac2++;
+                numEst++;               
+                if(estrato <= 3){
+                    valMatricula -= valMatricula*0.1; 
+                }                              
+                sumFac2 += valMatricula; 
+            }
+            if(facultad == 3 ){
+                nEstFac3++;
+                numEst++;               
+                if(estrato <= 3){
+                    valMatricula -= valMatricula*0.1; 
+                }                              
+                sumFac3 += valMatricula; 
+            }
+            if(facultad == 4 ){
+                nEstFac4++;
+                numEst++;               
+                if(estrato <= 3){
+                    valMatricula -= valMatricula*0.1; 
+                }                              
+                sumFac4 += valMatricula; 
+            }
+            if(facultad == 5 ){
+                nEstFac5++;
+                numEst++;               
+                if(estrato <= 3){
+                    valMatricula -= valMatricula*0.1; 
+                }                              
+                sumFac5 += valMatricula; 
+            }
+            
+
+                        
+            System.out.println("Desea seguir ingresando notas?\n Si = 1\n No = 0");
+            seguir = sc.nextInt();
+            
+   
+        }
+        
+        
+        System.out.println("El promedio de la facultad 1 es: "+(sumFac1/nEstFac1));
+        System.out.println("El promedio de la facultad 2 es: "+(sumFac2/nEstFac2));
+        System.out.println("El promedio de la facultad 3 es: "+(sumFac3/nEstFac3));
+        System.out.println("El promedio de la facultad 4 es: "+(sumFac4/nEstFac4));
+        System.out.println("El promedio de la facultad 5 es: "+(sumFac5/nEstFac5));
+        System.out.println("El promedio de la universidad es: "+((sumFac1+sumFac2+sumFac3+sumFac4+sumFac5)/numEst));
+        
